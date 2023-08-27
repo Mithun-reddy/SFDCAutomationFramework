@@ -80,22 +80,6 @@ public class LaunchBrowser {
 		
 		driver.findElement(By.xpath("(//button[@class='bootbutton'])[1]")).click();
 		
-		Set<String> windowhandles = driver.getWindowHandles();
-		
-		windowhandles.remove(parentWindow);
-		
-		String newWindow = "";
-		
-		for (String string : windowhandles) {
-			newWindow = string;
-			System.out.println("ID of Tab: "+ string);
-		}
-		
-		driver.switchTo().window(newWindow);
-		
-		driver.close();
-		
-		driver.switchTo().window(parentWindow);
 		
 //		driver.findElement(By.xpath("//button[text()='Window Alert']")).click();
 //		Thread.sleep(3000);
