@@ -3,7 +3,6 @@ package demo;
 import java.time.Duration;
 import java.util.NoSuchElementException;
 import java.util.Set;
-import java.util.concurrent.TimeUnit;
 import java.util.function.Function;
 
 import org.openqa.selenium.By;
@@ -84,30 +83,19 @@ public class LaunchBrowser {
 		
 		windowhandles.remove(parentWindow);
 		
-		String newWindow = "";
-		
-		for (String string : windowhandles) {
-			newWindow = string;
-			System.out.println("ID of Tab: "+ string);
-		}
-		
-		driver.switchTo().window(newWindow);
-		
-		driver.close();
-		
-		driver.switchTo().window(parentWindow);
-		
-//		driver.findElement(By.xpath("//button[text()='Window Alert']")).click();
-//		Thread.sleep(3000);
+//		String newWindow = "";
 //		
-//		driver.switchTo().alert().accept();
+//		for (String string : windowhandles) {
+//			newWindow = string;
+//			System.out.println("ID of Tab: "+ string);
+//		}
 //		
-//		driver.switchTo().frame("abcd");
-//		driver.findElement(By.xpath("")).click();
+//		driver.switchTo().window(newWindow);
 //		
-//		driver.switchTo().parentFrame();
+//		driver.close();
+//		
+//		driver.switchTo().window(parentWindow);
 		
-//		Thread.sleep(3000);
 		
 		driver.quit();
 		
